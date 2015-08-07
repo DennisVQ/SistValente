@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datatables en laravel 4</title>
+    {{ HTML::style('media/css/jquery.dataTables.css') }}
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    {{ HTML::script('media/js/jquery.dataTables.min.js') }}
+    
+</head>
+<body>
+    {{ Datatable::table()
+    ->addColumn('id','nombre_completo')  
+    ->setUrl(route('datatables'))
+    ->render() }}
+</body>
+</html>
